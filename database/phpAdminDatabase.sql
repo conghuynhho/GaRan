@@ -56,6 +56,8 @@ INSERT INTO `sanpham` (`MaSP`, `TenSP`, `MaLoai`, `SoLuong`, `DonViTinh`, `HinhA
 (132, 'Pepsi Vị Chanh', 10, 20, 'Lon', 'pepsivichanh.jpg', 17000),
 (135, 'Mirinda Cam Lon', 10, 17, 'Lon', 'mirindalon.png', 17000),
 
+-- --------------------------------------------------------
+
 --
 -- Cấu trúc bảng cho bảng `TaiKhoan`
 --
@@ -84,3 +86,28 @@ INSERT INTO `TaiKhoan` (`MaNV`, `TenDangNhap`, `MatKhau`, `Quyen`, `TrangThai`) 
 (8, 'nv08', 'nv08', 'Nhân viên', 1);
 (9, 'nv09', 'nv09', 'Nhân viên', 1);
 (10, 'nv10', 'nv10', 'Nhân viên', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `PhanQuyen`
+--
+
+CREATE TABLE `PhanQuyen` (
+  `Quyen` varchar(255) NOT NULL,
+  `NhapHang` int(1) NOT NULL,
+  `QLSanPham` int(1) NOT NULL,
+  `QLNhanVien` int(1) NOT NULL,
+  `QLKhachHang` int(1) NOT NULL,
+  `ThongKe` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `PhanQuyen`
+--
+
+INSERT INTO `PhanQuyen` (`Quyen`, `NhapHang`, `QLSanPham`, `QLNhanVien`, `QLKhachHang`, `ThongKe`) VALUES
+('Default', 0, 0, 0, 0, 0),
+('Nhân viên', 0, 0, 0, 1, 0),
+('Quản lý', 1, 0, 1, 1, 1),
+('Quản trị', 1, 1, 1, 1, 1);
