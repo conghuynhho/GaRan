@@ -250,3 +250,42 @@ INSERT INTO `CTPhieuNhap` (`MaPN`, `MaSP`, `SoLuong`, `DonGia`, `ThanhTien`) VAL
 (9, 135, 100, 10000, 1000000),
 (10, 136, 200, 23000, 4600000),
 (10, 137, 80, 84500, 6760000);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `HoaDon`
+--
+
+CREATE TABLE `HoaDon` (
+  `MaHD` int(11) NOT NULL,
+  `MaKH` int(11) NOT NULL,
+  `MaNV` int(11) NOT NULL,
+  `NgayLap` date NOT NULL,
+  `TongTien` int(11) NOT NULL,
+  `GhiChu` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `HoaDon`
+--
+
+INSERT INTO `HoaDon` (`MaHD`, `MaKH`, `MaNV`, `NgayLap`, `TongTien`, `GhiChu`) VALUES
+(18, 4, 3, '2022-01-18', 1013600, 'Đã thanh toán'),
+(19, 1, 1, '2022-01-20', 482400, 'Đã thanh toán'),
+(20, 2, 1, '2022-01-28', 840000, 'Đã thanh toán'),
+(21, 3, 2, '2022-02-07', 1045600, 'Đã thanh toán'),
+(22, 1, 1, '2022-02-14', 1004000, 'Đã thanh toán'),
+(23, 7, 3, '2022-02-16', 576800, 'Đã thanh toán'),
+(24, 7, 2, '2022-03-08', 601300, 'Đã thanh toán'),
+(25, 2, 2, '2022-03-09', 391300, 'Đã thanh toán'),
+(26, 8, 4, '2022-03-12', 1286600, 'Đã thanh toán'),
+(27, 8, 3, '2022-03-24', 590400, 'Đã thanh toán'),
+(28, 7, 4, '2022-02-04', 2041600, 'Đã thanh toán'),
+(29, 9, 2, '2022-04-10', 633500, 'Đã thanh toán'),
+(30, 10, 4, '2022-04-15', 3136800, 'Đã thanh toán'),
+(31, 11, 4, '2022-05-02', 782600, 'Đã thanh toán'),
+(32, 11, 0, '2022-05-03', 1477700, 'Đã thanh toán'),
+(33, 9, 0, '2022-05-06', 5110000, 'Đã thanh toán'),
+(35, 3, 0, '2022-05-08', 304200, 'Đã thanh toán'),
+(37, 2, 0, '2022-05-08', 117000, 'Đã thanh toán');
