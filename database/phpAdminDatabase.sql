@@ -416,3 +416,192 @@ INSERT INTO `KhachHang` (`MaKH`, `Ho`, `Ten`, `GioiTinh`, `TongChiTieu`, `TinhTr
 (9, 'Tô Diễm', 'Trinh', 'Nữ', 5743500, 1),
 (10, 'Nguyễn Hải', 'Hưng', 'Nam', 3136800, 1),
 (11, 'Đào Nhật', 'Tân', 'Nam', 2260300, 1);
+
+--
+-- Chỉ mục cho các bảng đã đổ
+--
+
+--
+-- Chỉ mục cho bảng `CTHoaDon`
+--
+ALTER TABLE `CTHoaDon`
+  ADD PRIMARY KEY (`MaHD`,`MaSP`),
+  ADD KEY `cthoadon_ibfk_1` (`MaHD`);
+
+--
+-- Chỉ mục cho bảng `CTPhieuNhap`
+--
+ALTER TABLE `CTPhieuNhap`
+  ADD PRIMARY KEY (`MaPN`,`MaSP`);
+
+--
+-- Chỉ mục cho bảng `GiamGia`
+--
+ALTER TABLE `GiamGia`
+  ADD PRIMARY KEY (`MaGiam`);
+
+--
+-- Chỉ mục cho bảng `HoaDon`
+--
+ALTER TABLE `HoaDon`
+  ADD PRIMARY KEY (`MaHD`),
+  ADD KEY `hoadon_ibfk_1` (`MaNV`),
+  ADD KEY `hoadon_ibfk_2` (`MaKH`);
+
+--
+-- Chỉ mục cho bảng `KhachHang`
+--
+ALTER TABLE `KhachHang`
+  ADD PRIMARY KEY (`MaKH`);
+
+--
+-- Chỉ mục cho bảng `Loai`
+--
+ALTER TABLE `Loai`
+  ADD PRIMARY KEY (`MaLoai`);
+
+--
+-- Chỉ mục cho bảng `NhaCungCap`
+--
+ALTER TABLE `NhaCungCap`
+  ADD PRIMARY KEY (`MaNCC`);
+
+--
+-- Chỉ mục cho bảng `NhanVien`
+--
+ALTER TABLE `NhanVien`
+  ADD PRIMARY KEY (`MaNV`);
+
+--
+-- Chỉ mục cho bảng `PhanQuyen`
+--
+ALTER TABLE `PhanQuyen`
+  ADD PRIMARY KEY (`Quyen`);
+
+--
+-- Chỉ mục cho bảng `PhieuNhap`
+--
+ALTER TABLE `PhieuNhap`
+  ADD PRIMARY KEY (`MaPN`),
+  ADD KEY `phieunhap_ibfk_1` (`MaNCC`),
+  ADD KEY `phieunhap_ibfk_2` (`MaNV`);
+
+--
+-- Chỉ mục cho bảng `SanPham`
+--
+ALTER TABLE `SanPham`
+  ADD PRIMARY KEY (`MaSP`),
+  ADD KEY `sanpham_ibfk_1` (`MaLoai`);
+
+--
+-- Chỉ mục cho bảng `TaiKhoan`
+--
+ALTER TABLE `TaiKhoan`
+  ADD PRIMARY KEY (`MaNV`),
+  ADD KEY `taikhoan_ibfk_2` (`Quyen`);
+
+--
+-- AUTO_INCREMENT cho các bảng đã đổ
+--
+
+--
+-- AUTO_INCREMENT cho bảng `GiamGia`
+--
+ALTER TABLE `GiamGia`
+  MODIFY `MaGiam` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT cho bảng `HoaDon`
+--
+ALTER TABLE `HoaDon`
+  MODIFY `MaHD` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+
+--
+-- AUTO_INCREMENT cho bảng `KhachHang`
+--
+ALTER TABLE `KhachHang`
+  MODIFY `MaKH` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT cho bảng `Loai`
+--
+ALTER TABLE `Loai`
+  MODIFY `MaLoai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT cho bảng `NhaCungCap`
+--
+ALTER TABLE `NhaCungCap`
+  MODIFY `MaNCC` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT cho bảng `NhanVien`
+--
+ALTER TABLE `NhanVien`
+  MODIFY `MaNV` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT cho bảng `phieunhap`
+--
+ALTER TABLE `PhieuNhap`
+  MODIFY `MaPN` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT cho bảng `sanpham`
+--
+ALTER TABLE `SanPham`
+  MODIFY `MaSP` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=145;
+
+--
+-- AUTO_INCREMENT cho bảng `taikhoan`
+--
+ALTER TABLE `TaiKhoan`
+  MODIFY `MaNV` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+
+--
+-- Các ràng buộc cho các bảng đã đổ
+--
+
+--
+-- Các ràng buộc cho bảng `cthoadon`
+--
+ALTER TABLE `CTHoaDon`
+  ADD CONSTRAINT `cthoadon_ibfk_1` FOREIGN KEY (`MaHD`) REFERENCES `HoaDon` (`MaHD`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Các ràng buộc cho bảng `ctphieunhap`
+--
+ALTER TABLE `CTPhieuNhap`
+  ADD CONSTRAINT `ctphieunhap_ibfk_2` FOREIGN KEY (`MaPN`) REFERENCES `PhieuNhap` (`MaPN`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Các ràng buộc cho bảng `hoadon`
+--
+ALTER TABLE `HoaDon`
+  ADD CONSTRAINT `hoadon_ibfk_1` FOREIGN KEY (`MaNV`) REFERENCES `NhanVien` (`MaNV`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `hoadon_ibfk_2` FOREIGN KEY (`MaKH`) REFERENCES `KhachHang` (`MaKH`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Các ràng buộc cho bảng `phieunhap`
+--
+ALTER TABLE `PhieuNhap`
+  ADD CONSTRAINT `phieunhap_ibfk_1` FOREIGN KEY (`MaNCC`) REFERENCES `NhaCungCap` (`MaNCC`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `phieunhap_ibfk_2` FOREIGN KEY (`MaNV`) REFERENCES `NhanVien` (`MaNV`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Các ràng buộc cho bảng `sanpham`
+--
+ALTER TABLE `SanPham`
+  ADD CONSTRAINT `sanpham_ibfk_1` FOREIGN KEY (`MaLoai`) REFERENCES `Loai` (`MaLoai`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Các ràng buộc cho bảng `taikhoan`
+--
+ALTER TABLE `TaiKhoan`
+  ADD CONSTRAINT `taikhoan_ibfk_1` FOREIGN KEY (`MaNV`) REFERENCES `NhanVien` (`MaNV`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `taikhoan_ibfk_2` FOREIGN KEY (`Quyen`) REFERENCES `PhanQuyen` (`Quyen`) ON DELETE CASCADE;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
