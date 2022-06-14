@@ -111,3 +111,32 @@ INSERT INTO `PhanQuyen` (`Quyen`, `NhapHang`, `QLSanPham`, `QLNhanVien`, `QLKhac
 ('Nhân viên', 0, 0, 0, 1, 0),
 ('Quản lý', 1, 0, 1, 1, 1),
 ('Quản trị', 1, 1, 1, 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `NhanVien`
+--
+
+CREATE TABLE `NhanVien` (
+  `MaNV` int(11) NOT NULL,
+  `Ho` varchar(255) NOT NULL,
+  `Ten` varchar(255) NOT NULL,
+  `GioiTinh` varchar(3) NOT NULL,
+  `ChucVu` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `nhanvien`
+--
+
+INSERT INTO `NhanVien` (`MaNV`, `Ho`, `Ten`, `GioiTinh`, `ChucVu`) VALUES
+(0, 'Admin', '', '', 'Admin'),
+(1, 'Hồ Công', 'Huynh', 'Nam', 'Quản Lý'),
+(2, 'Bùi Anh', 'Thư', 'Nữ', 'Quản Lý'),
+(3, 'Trương Quang', 'Khải', 'Nam', 'Quản Lý'),
+(4, 'Phạm Hoàng', 'Đức', 'Nam', 'Nhân Viên'),
+(12, 'Bùi Thuý', 'Vi', 'Nữ', 'Nhân Viên'),
+(13, 'Phan Lê Bảo', 'Kiên', 'Nữ', 'Nhân Viên'),
+(14, 'Lê Văn', 'Thắng', 'Nam', 'Nhân Viên'),
+(15, 'Nguyễn Bá', 'Đắc', 'Nam', 'Quản Lý');
