@@ -162,3 +162,30 @@ INSERT INTO `NhaCungCap` (`MaNCC`, `TenNCC`, `DiaChi`, `DienThoai`) VALUES
 (1, 'Gà Tươi Khánh An', '273 An Dương Vương, phường 6, quận 5, TP.HCM', '0989713111'),
 (2, 'Siêu thị Coop Mart Phú Nhuận', '462 Phan Xích Long, quận Phú Nhuận, HCM', '02438242526'),
 (5, 'Đại lý nước ngọt An Thư', '492 Xô Viết Nghệ Tĩnh, P.25, Q. Bình Thạnh', '0978647281');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `Loai`
+--
+
+CREATE TABLE `Loai` (
+  `MaLoai` int(11) NOT NULL,
+  `TenLoai` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `Loai`
+--
+
+INSERT INTO `Loai` (`MaLoai`, `TenLoai`) VALUES
+(1, 'Gà Rán'),
+(2, 'Gà Quay'),
+(3, 'Cơm Gà');
+(4, 'Gà với Khoai Tây');
+(5, 'Burger');
+(6, 'Mì Ý');
+(7, 'Thức Ăn Nhẹ');
+(8, 'Bắp Cải Trộn');
+(9, 'Tráng Miệng');
+(10, 'Nước Ngọt');
