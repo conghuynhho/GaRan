@@ -386,3 +386,33 @@ INSERT INTO `CTHoaDon` (`MaHD`, `MaSP`, `SoLuong`, `DonGia`, `ThanhTien`) VALUES
 (35, 117, 1, 149000, 149000),
 (35, 131, 8, 10000, 70000),
 (37, 116, 1, 130000, 130000);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `KhachHang`
+--
+
+CREATE TABLE `KhachHang` (
+  `MaKH` int(11) NOT NULL,
+  `Ho` varchar(255) NOT NULL,
+  `Ten` varchar(255) NOT NULL,
+  `GioiTinh` varchar(3) NOT NULL,
+  `TongChiTieu` int(11) NOT NULL DEFAULT 0,
+  `TinhTrang` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `khachhang`
+--
+
+INSERT INTO `KhachHang` (`MaKH`, `Ho`, `Ten`, `GioiTinh`, `TongChiTieu`, `TinhTrang`) VALUES
+(1, 'Bùi Quang', 'Thái', 'Nam', 1486400, 1),
+(2, 'Nguyễn Thu', 'Việt', 'Nữ', 1497300, 1),
+(3, 'Hồ Gia', 'Hân', 'Nữ', 1468800, 1),
+(4, 'Phan Ngọc', 'An', 'Nam', 1013600, 1),
+(7, 'Từ Kim', 'Ngọc', 'Nữ', 3219700, 1),
+(8, 'Phan Tấn Nhất', 'Khâm', 'Nam', 1877000, 1),
+(9, 'Tô Diễm', 'Trinh', 'Nữ', 5743500, 1),
+(10, 'Nguyễn Hải', 'Hưng', 'Nam', 3136800, 1),
+(11, 'Đào Nhật', 'Tân', 'Nam', 2260300, 1);
