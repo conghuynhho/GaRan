@@ -55,3 +55,32 @@ INSERT INTO `sanpham` (`MaSP`, `TenSP`, `MaLoai`, `SoLuong`, `DonViTinh`, `HinhA
 (131, 'Bánh Trứng (4 cái)', 9, 32, 'Cái', 'banhtrung1.jpg', 54000),
 (132, 'Pepsi Vị Chanh', 10, 20, 'Lon', 'pepsivichanh.jpg', 17000),
 (135, 'Mirinda Cam Lon', 10, 17, 'Lon', 'mirindalon.png', 17000),
+
+--
+-- Cấu trúc bảng cho bảng `TaiKhoan`
+--
+
+CREATE TABLE `TaiKhoan` (
+  `MaNV` int(11) NOT NULL,
+  `TenDangNhap` varchar(255) NOT NULL,
+  `MatKhau` varchar(255) NOT NULL,
+  `Quyen` varchar(255) NOT NULL,
+  `TrangThai` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `TaiKhoan`
+--
+
+INSERT INTO `TaiKhoan` (`MaNV`, `TenDangNhap`, `MatKhau`, `Quyen`, `TrangThai`) VALUES
+(0, 'admin', 'admin', 'Quản trị', 1),
+(1, 'ql01', 'ql01', 'Quản lý', 1),
+(2, 'ql02', 'ql02', 'Quản lý', 1),
+(3, 'ql03', 'ql03', 'Quản lý', 1),
+(4, 'nv01', 'nv01', 'Nhân viên', 1);
+(5, 'nv02', 'nv02', 'Nhân viên', 1);
+(6, 'nv03', 'nv03', 'Nhân viên', 1);
+(7, 'nv04', 'nv04', 'Nhân viên', 1);
+(8, 'nv08', 'nv08', 'Nhân viên', 1);
+(9, 'nv09', 'nv09', 'Nhân viên', 1);
+(10, 'nv10', 'nv10', 'Nhân viên', 1);
