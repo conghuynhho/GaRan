@@ -189,3 +189,29 @@ INSERT INTO `Loai` (`MaLoai`, `TenLoai`) VALUES
 (8, 'Bắp Cải Trộn');
 (9, 'Tráng Miệng');
 (10, 'Nước Ngọt');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `GiamGia`
+--
+
+CREATE TABLE `GiamGia` (
+  `MaGiam` int(11) NOT NULL,
+  `TenGiamGia` text NOT NULL,
+  `PhanTramGiam` int(11) NOT NULL,
+  `DieuKien` int(11) NOT NULL,
+  `NgayBD` date NOT NULL,
+  `NgayKT` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `GiamGia`
+--
+
+INSERT INTO `GiamGia` (`MaGiam`, `TenGiamGia`, `PhanTramGiam`, `DieuKien`, `NgayBD`, `NgayKT`) VALUES
+(1, 'Không giảm giá', 0, 0, '2022-01-01', '2024-12-31'),
+(2, 'Giảm 20% đơn hàng từ 150.000đ', 20, 150000, '2022-04-22', '2022-05-13'),
+(4, 'Giảm 10% đơn hàng từ 80.000đ', 10, 80000, '2022-03-26', '2022-05-31'),
+(6, '30/04-01/05 giảm 30% đơn hàng từ 300.000đ', 30, 300000, '2022-04-20', '2022-05-08');
+(6, '1/6 giảm 25% đơn hàng từ 106.000đ', 25, 106000, '2022-05-31', '2022-06-02');
