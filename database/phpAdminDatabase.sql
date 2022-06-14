@@ -140,3 +140,25 @@ INSERT INTO `NhanVien` (`MaNV`, `Ho`, `Ten`, `GioiTinh`, `ChucVu`) VALUES
 (13, 'Phan Lê Bảo', 'Kiên', 'Nữ', 'Nhân Viên'),
 (14, 'Lê Văn', 'Thắng', 'Nam', 'Nhân Viên'),
 (15, 'Nguyễn Bá', 'Đắc', 'Nam', 'Quản Lý');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `NhaCungCap`
+--
+
+CREATE TABLE `NhaCungCap` (
+  `MaNCC` int(11) NOT NULL,
+  `TenNCC` varchar(255) NOT NULL,
+  `DiaChi` varchar(255) NOT NULL,
+  `DienThoai` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `NhaCungCap`
+--
+
+INSERT INTO `NhaCungCap` (`MaNCC`, `TenNCC`, `DiaChi`, `DienThoai`) VALUES
+(1, 'Gà Tươi Khánh An', '273 An Dương Vương, phường 6, quận 5, TP.HCM', '0989713111'),
+(2, 'Siêu thị Coop Mart Phú Nhuận', '462 Phan Xích Long, quận Phú Nhuận, HCM', '02438242526'),
+(5, 'Đại lý nước ngọt An Thư', '492 Xô Viết Nghệ Tĩnh, P.25, Q. Bình Thạnh', '0978647281');
