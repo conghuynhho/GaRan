@@ -31,7 +31,7 @@ CREATE TABLE `SanPham` (
 -- Đang đổ dữ liệu cho bảng `sanpham`
 --
 
-INSERT INTO `sanpham` (`MaSP`, `TenSP`, `MaLoai`, `SoLuong`, `DonViTinh`, `HinhAnh`, `DonGia`) VALUES
+INSERT INTO `SanPham` (`MaSP`, `TenSP`, `MaLoai`, `SoLuong`, `DonViTinh`, `HinhAnh`, `DonGia`) VALUES
 (111, 'Gà Rán (1 miếng)', 1, 41, 'Cái', 'garan0.png', 35000),
 (112, 'Gà Rán (2 miếng)', 1, 39, 'Cái', 'garan1.png', 68000),
 (113, 'Gà Rán (3 miếng)', 1, 44, 'Cái', 'garan2.png', 101000),
@@ -54,7 +54,7 @@ INSERT INTO `sanpham` (`MaSP`, `TenSP`, `MaLoai`, `SoLuong`, `DonViTinh`, `HinhA
 (130, 'Bánh Trứng', 9, 30, 'Cái', 'banhtrung0.jpg', 17000),
 (131, 'Bánh Trứng (4 cái)', 9, 32, 'Cái', 'banhtrung1.jpg', 54000),
 (132, 'Pepsi Vị Chanh', 10, 20, 'Lon', 'pepsivichanh.jpg', 17000),
-(135, 'Mirinda Cam Lon', 10, 17, 'Lon', 'mirindalon.png', 17000),
+(135, 'Mirinda Cam Lon', 10, 17, 'Lon', 'mirindalon.png', 17000);
 
 -- --------------------------------------------------------
 
@@ -80,12 +80,6 @@ INSERT INTO `TaiKhoan` (`MaNV`, `TenDangNhap`, `MatKhau`, `Quyen`, `TrangThai`) 
 (2, 'ql02', 'ql02', 'Quản lý', 1),
 (3, 'ql03', 'ql03', 'Quản lý', 1),
 (4, 'nv01', 'nv01', 'Nhân viên', 1);
-(5, 'nv02', 'nv02', 'Nhân viên', 1);
-(6, 'nv03', 'nv03', 'Nhân viên', 1);
-(7, 'nv04', 'nv04', 'Nhân viên', 1);
-(8, 'nv08', 'nv08', 'Nhân viên', 1);
-(9, 'nv09', 'nv09', 'Nhân viên', 1);
-(10, 'nv10', 'nv10', 'Nhân viên', 1);
 
 -- --------------------------------------------------------
 
@@ -114,6 +108,31 @@ INSERT INTO `PhanQuyen` (`Quyen`, `NhapHang`, `QLSanPham`, `QLNhanVien`, `QLKhac
 
 -- --------------------------------------------------------
 
+--
+-- Cấu trúc bảng cho bảng `phieunhap`
+--
+
+CREATE TABLE `PhieuNhap` (
+  `MaPN` int(11) NOT NULL,
+  `MaNCC` int(11) NOT NULL,
+  `MaNV` int(11) NOT NULL,
+  `NgayLap` date NOT NULL,
+  `TongTien` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `phieuNhap`
+--
+
+INSERT INTO `PhieuNhap` (`MaPN`, `MaNCC`, `MaNV`, `NgayLap`, `TongTien`) VALUES
+(4, 2, 0, '2021-04-19', 1027000),
+(5, 2, 0, '2021-04-23', 268000),
+(7, 2, 0, '2021-04-26', 90000),
+(8, 2, 0, '2021-05-02', 1070000),
+(9, 1, 0, '2021-05-04', 1000000),
+(10, 5, 0, '2021-05-07', 11360000);
+
+-- --------------------------------------------------------
 --
 -- Cấu trúc bảng cho bảng `NhanVien`
 --
@@ -181,13 +200,13 @@ CREATE TABLE `Loai` (
 INSERT INTO `Loai` (`MaLoai`, `TenLoai`) VALUES
 (1, 'Gà Rán'),
 (2, 'Gà Quay'),
-(3, 'Cơm Gà');
-(4, 'Gà với Khoai Tây');
-(5, 'Burger');
-(6, 'Mì Ý');
-(7, 'Thức Ăn Nhẹ');
-(8, 'Bắp Cải Trộn');
-(9, 'Tráng Miệng');
+(3, 'Cơm Gà'),
+(4, 'Gà với Khoai Tây'),
+(5, 'Burger'),
+(6, 'Mì Ý'),
+(7, 'Thức Ăn Nhẹ'),
+(8, 'Bắp Cải Trộn'),
+(9, 'Tráng Miệng'),
 (10, 'Nước Ngọt');
 
 -- --------------------------------------------------------
@@ -213,7 +232,7 @@ INSERT INTO `GiamGia` (`MaGiam`, `TenGiamGia`, `PhanTramGiam`, `DieuKien`, `Ngay
 (1, 'Không giảm giá', 0, 0, '2022-01-01', '2024-12-31'),
 (2, 'Giảm 20% đơn hàng từ 150.000đ', 20, 150000, '2022-04-22', '2022-05-13'),
 (4, 'Giảm 10% đơn hàng từ 80.000đ', 10, 80000, '2022-03-26', '2022-05-31'),
-(6, '30/04-01/05 giảm 30% đơn hàng từ 300.000đ', 30, 300000, '2022-04-20', '2022-05-08');
+(5, '30/04-01/05 giảm 30% đơn hàng từ 300.000đ', 30, 300000, '2022-04-20', '2022-05-08'),
 (6, '1/6 giảm 25% đơn hàng từ 106.000đ', 25, 106000, '2022-05-31', '2022-06-02');
 
 -- --------------------------------------------------------
