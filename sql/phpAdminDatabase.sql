@@ -32,29 +32,29 @@ CREATE TABLE `SanPham` (
 --
 
 INSERT INTO `SanPham` (`MaSP`, `TenSP`, `MaLoai`, `SoLuong`, `DonViTinh`, `HinhAnh`, `DonGia`) VALUES
-(111, 'Gà Rán (1 miếng)', 1, 41, 'Cái', 'garan0.png', 35000),
-(112, 'Gà Rán (2 miếng)', 1, 39, 'Cái', 'garan1.png', 68000),
-(113, 'Gà Rán (3 miếng)', 1, 44, 'Cái', 'garan2.png', 101000),
+(111, 'Gà Rán (1 miếng)', 1, 41, 'Cái', 'garan0.jpeg', 35000),
+(112, 'Gà Rán (2 miếng)', 1, 39, 'Cái', 'garan1.jpeg', 68000),
+(113, 'Gà Rán (3 miếng)', 1, 44, 'Cái', 'garan2.jpeg', 101000),
 (114, 'Gà Rán (6 miếng)', 1, 26, 'Cái', 'garan3.png', 195000),
-(115, 'Đùi Gà Quay (1 miếng)', 2, 38, 'Cái', 'gaquay0.png', 67000),
-(116, 'Phi Lê Gà Quay (1 miếng)', 2, 39, 'Cái', 'gaquay1.png', 35000),
-(117, 'Cơm Gà Rán (1 phần)', 3, 24, 'Phần', 'comgaran0.png', 42000),
-(118, 'Cơm Gà Phi Lê (1 phần)', 3, 36, 'Phần', 'comgaphile0.png', 42000),
-(119, 'Cơm Gà Bít-tết (1 phần)', 3, 32, 'Phần', 'comgabittet0.jpg', 42000),
-(120, 'Gà Bít-tết với khoai tây chiên (1 phần)', 4, 37, 'Phần', 'gabittetkhoaitay0.jpg', 42000),
-(121, 'Cơm Gà Phi Lê Giòn (1 phần)', 3, 41, 'Phần', 'comgaphilegion0.jpg', 42000),
-(122, 'Cơm Gà Xiên Que (1 phần)', 3, 43, 'Phần', 'comgaxienque0.jpg', 42000),
-(123, 'Burger Tôm (1 phần)', 5, 30, 'Cái', 'burger0.jpg', 41000),
+(115, 'Đùi Gà Quay (1 miếng)', 2, 38, 'Cái', 'gaquay0.jpeg', 67000),
+(116, 'Phi Lê Gà Quay (1 miếng)', 2, 39, 'Cái', 'gaquay1.jpeg', 35000),
+(117, 'Cơm Gà Rán (1 phần)', 3, 24, 'Phần', 'comgaran0.jpeg', 42000),
+(118, 'Cơm Gà Phi Lê (1 phần)', 3, 36, 'Phần', 'comgaphile0.jpeg', 42000),
+(119, 'Cơm Gà Bít-tết (1 phần)', 3, 32, 'Phần', 'comgabittet0.jpeg', 42000),
+(120, 'Gà Bít-tết với khoai tây chiên (1 phần)', 4, 37, 'Phần', 'gabittetkhoaitay0.jpeg', 42000),
+(121, 'Cơm Gà Phi Lê Giòn (1 phần)', 3, 41, 'Phần', 'comgaphilegion0.jpeg', 42000),
+(122, 'Cơm Gà Xiên Que (1 phần)', 3, 43, 'Phần', 'comgaxienque0.jpeg', 42000),
+(123, 'Burger Tôm (1 phần)', 5, 30, 'Cái', 'burger0.jpeg', 41000),
 (124, 'Burger Gà Quay (1 phần)', 5, 20, 'Cái', 'burger1.jpeg', 47000),
 (125, 'Mì Ý Sốt Cà Gà Viên (1 phần)', 6, 10, 'Phần', 'miy0.jpeg', 37000),
 (126, 'Mì Ý Sốt Cà Gà Zinger (1 phần)', 6, 15, 'Phần', 'miy1.jpeg', 53000),
 (127, 'Phô Mai Viên (4 viên)', 7, 20, 'Phần', 'phomaivien0.jpeg', 30000),
-(128, 'Cá Thanh (3 thanh)', 7, 21, 'Phần', 'cathanh0.jpg', 40000),
-(129, 'Bắp Cải Trộn', 8, 20, 'Phần', 'bapcaitron0.jpg', 12000),
-(130, 'Bánh Trứng', 9, 30, 'Cái', 'banhtrung0.jpg', 17000),
-(131, 'Bánh Trứng (4 cái)', 9, 32, 'Cái', 'banhtrung1.jpg', 54000),
-(132, 'Pepsi Vị Chanh', 10, 20, 'Lon', 'pepsivichanh.jpg', 17000),
-(135, 'Mirinda Cam Lon', 10, 17, 'Lon', 'mirindalon.png', 17000);
+(128, 'Cá Thanh (3 thanh)', 7, 21, 'Phần', 'cathanh0.jpeg', 40000),
+(129, 'Bắp Cải Trộn', 8, 20, 'Phần', 'bapcaitron0.jpeg', 12000),
+(130, 'Bánh Trứng', 9, 30, 'Cái', 'banhtrung0.png', 17000),
+(131, 'Bánh Trứng (4 cái)', 9, 32, 'Cái', 'banhtrung1.webp', 54000),
+(132, 'Pepsi Vị Chanh', 10, 20, 'Lon', 'pepsivichanh.jpeg', 17000),
+(135, 'Mirinda Cam Lon', 10, 17, 'Lon', 'mirindalon.jpeg', 17000);
 
 -- --------------------------------------------------------
 
