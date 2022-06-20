@@ -1,6 +1,6 @@
 package Main;
 
-import Database.MyConnect;
+import ConnectDB.MyConnect;
 import View.DangNhapGUI;
 
 public class Main {
