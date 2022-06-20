@@ -8,7 +8,7 @@
 ***
 
 ### 1. Giới thiệu ứng dụng
-- Quản lý cửa hàng gà rán là ứng dụng giúp cửa hàng kinh doanh gà rán nói riêng và các cửa hàng kinh doanh thức ăn nhanh nói chung có thể kiểm soát đơn hàng, doanh thu, quản lý sản phẩm, quy trình bán hàng, chăm sóc khách hàng,....
+- Quản lý cửa hàng gà rán là ứng dụng giúp cửa hàng kinh doanh gà rán nói riêng và các cửa hàng kinh doanh thức ăn nhanh nói chung giúp cửa hàng kiểm soát đơn hàng, doanh thu, quản lý sản phẩm, quy trình bán hàng, chăm sóc khách hàng,....
 - Ứng dụng bao gồm một số chức năng chính như: 
   * Chức năng đăng nhập
   * Chức năng đổi mật khẩu
