@@ -38,6 +38,6 @@
 `sql`: Chứa file phpAdminDatabase.sql bao gồm tất cả dữ liệu của ứng dụng.  
 ***Note: Có thể xóa file `.gitkeep`:  File này ko có tác dụng gì***
 
-### 5. Hướng dẫn:
+### 5. Hướng dẫn
 1) Tạo database "quanlygaran" và import ./sql/phpAdminDatabase.sql vào MySQL.
 2) Import các thư viện liên quan trong thư mục /libs/
