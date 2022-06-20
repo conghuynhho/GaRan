@@ -36,7 +36,7 @@
 `view`: Dùng để lưu file code màn hình/ giao diện.   
 `tester`: Lưu các file test.  
 `sql`: Chứa file phpAdminDatabase.sql bao gồm tất cả dữ liệu của ứng dụng.  
-** Note: Có thể xóa file `.gitkeep`:  File này ko có tác dụng gì **
+***Note: Có thể xóa file `.gitkeep`:  File này ko có tác dụng gì***
 
 ### 5. Hướng dẫn:
 1) Tạo database "quanlygaran" và import ./sql/phpAdminDatabase.sql vào MySQL.
