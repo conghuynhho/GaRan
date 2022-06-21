@@ -31,7 +31,8 @@
 
 ### 4. Structure
 `database` : Sử dụng để connect database  
-`model` : Tương tác với database (GET, PUT, POST...)   
+`model` : Chứa các đối tượng tương ứng với dữ liệu trong database trong ứng dụng.  
+`process`: Chứa các file xử lý logic tương ứng với các đối tượng.
 `resources`: Sử dụng để lưu hình ảnh âm thanh  
 `view`: Dùng để lưu file code màn hình/ giao diện.   
 `tester`: Lưu các file test.  
